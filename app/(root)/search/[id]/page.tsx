@@ -8,8 +8,6 @@ const SearchPlayer = async ({ searchParams }: SearchParamsProps) => {
   );
   const searchDetailsJson = await searchDetails.json();
   console.log("Logging search results  >>>>>", searchDetailsJson?.results[0]);
-  // const videoUrl =
-  //   "https://in1-as2-01.shegu.net/vip/p1/movie_mp4_h264/2020/2/9/27769/movie.27769.2020.360p.H264.20200703064504.mp4?KEY1=R-MbE4aiLMeVKtmRqGvksQ&KEY2=1706621803";
   console.log(+searchDetailsJson?.results[0]?.release_date?.split("-")[0]);
   // const videoDetails = await getVideoDetails({
   //   media: {
