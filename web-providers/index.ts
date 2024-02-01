@@ -6,9 +6,9 @@ import {
 } from "@movie-web/providers";
 
 // this is how the library will make http requests
-const myFetcher = makeStandardFetcher(fetch);
+// const myFetcher = makeStandardFetcher(fetch);
 
-const fetcher = makeSimpleProxyFetcher(process.env.NEXT_CORS_PROXY_URL!, fetch);
+// const fetcher = makeSimpleProxyFetcher(process.env.NEXT_CORS_PROXY_URL!, fetch);
 
 // make an instance of the providers library
 console.log(process.env.NEXT_CORS_PROXY_URL);

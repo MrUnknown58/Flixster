@@ -1,11 +1,10 @@
-import VideoPlayer from "@/components/shared/VideoPlayer";
 // import { getVideoDetails } from "@/lib/actions/video.action";
 import { SearchParamsProps } from "@/types";
 import React from "react";
 
 const SearchPlayer = async ({ searchParams }: SearchParamsProps) => {
   const searchDetails = await fetch(
-    `https://api.themoviedb.org/3/search/movie?query=${searchParams.q}&api_key=6449600bc907edb730bac53dfb0d5236`
+    `https://api.themoviedb.org/3/search/movie?query=${searchParams.q}`
   );
   const searchDetailsJson = await searchDetails.json();
   console.log("Logging search results  >>>>>", searchDetailsJson?.results[0]);
