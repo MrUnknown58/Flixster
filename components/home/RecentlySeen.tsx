@@ -3,40 +3,38 @@ import React from "react";
 import { CardContainer, CardBody, CardItem } from "../ui/3d-card";
 import Image from "next/image";
 import { FollowerPointerCard } from "../ui/following-pointer";
-import { Link } from "lucide-react";
-
-const movieInfo = [
-  {
-    id: 1,
-    title: "The Shawshank Redemption",
-    year: 1994,
-    rating: 9.3,
-  },
-  {
-    id: 2,
-    title: "The Godfather",
-    year: 1972,
-    rating: 9.2,
-  },
-  {
-    id: 3,
-    title: "The Godfather: Part II",
-    year: 1974,
-    rating: 9,
-  },
-  {
-    id: 4,
-    title: "The Dark Knight",
-    year: 2008,
-    rating: 9,
-  },
-  {
-    id: 5,
-    title: "Superman",
-    year: 1978,
-    rating: 7.3,
-  },
-];
+// const movieInfo = [
+//   {
+//     id: 1,
+//     title: "The Shawshank Redemption",
+//     year: 1994,
+//     rating: 9.3,
+//   },
+//   {
+//     id: 2,
+//     title: "The Godfather",
+//     year: 1972,
+//     rating: 9.2,
+//   },
+//   {
+//     id: 3,
+//     title: "The Godfather: Part II",
+//     year: 1974,
+//     rating: 9,
+//   },
+//   {
+//     id: 4,
+//     title: "The Dark Knight",
+//     year: 2008,
+//     rating: 9,
+//   },
+//   {
+//     id: 5,
+//     title: "Superman",
+//     year: 1978,
+//     rating: 7.3,
+//   },
+// ];
 const TitleComponent = ({
   title,
   avatar,
