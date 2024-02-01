@@ -9,10 +9,13 @@ const StreamMovies = async ({ params }: any) => {
   //   console.log(movieInfo);
   const media = convertTMDBtoMedia(movieInfo, "movie");
 
-  const videoDetails = await fetch("http://localhost:3000/api/example", {
-    method: "POST",
-    body: JSON.stringify({ media }),
-  }).then((res) => res.json());
+  const videoDetails = await fetch(
+    `${process.env.NEXT_SERVER_API_URL}/api/example`,
+    {
+      method: "POST",
+      body: JSON.stringify({ media }),
+    }
+  ).then((res) => res.json());
   console.log(videoDetails);
   return (
     <>
