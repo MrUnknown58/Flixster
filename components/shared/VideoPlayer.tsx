@@ -19,8 +19,11 @@ const VideoPlayer = ({
   useEffect(() => {
     if (type === "hls") setSrc(videoInfo?.stream?.playlist);
     else if (type === "file") {
+      // console.log(
+      //   Object.values(videoInfo?.stream?.qualities).slice(-1)[0]?.url
+      // );
       // @ts-ignore
-      setSrc(Object.values(videoInfo?.stream?.qualities)[0]);
+      setSrc(Object.values(videoInfo?.stream?.qualities)?.slice(-1)[0]?.url);
     } else
       setSrc(
         "https://b-g-eu-8.feetcdn.com:2223/v3-hls-playback/bf401b40369f957a567be4140c5208158545062ecdfbb850252a5ff3de8eb68474f89ffc4746c66707319f8fff9bfd32693baf24f015b700a092b80a13bf05dc0175bfdc70d36607a2b39ba23dd45817184407b874525a2c46a4f663a1d5f52ff145e1a96186b955c5e2f1a7e89131e982e884338e381514bcbb2301ae8043c2dbfc64e70ca723d6971508161d2aa41a4dad9e336505488544958fa7ad46b46f1d25415e2f0f8ce1a0d3315a0be2dd7f/playlist.m3u8"
