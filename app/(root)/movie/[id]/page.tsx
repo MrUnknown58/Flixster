@@ -6,7 +6,7 @@ import React from "react";
 const StreamMovies = async ({ params }: any) => {
   console.log(params);
   const movieInfo = await getMovieInfo(params.id, "movie");
-  //   console.log(movieInfo);
+  console.log(movieInfo);
   const media = convertTMDBtoMedia(movieInfo, "movie");
 
   const videoDetails = await fetch(
