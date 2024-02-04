@@ -15,9 +15,13 @@ console.log(process.env.NEXT_CORS_PROXY_URL);
 export const providers = makeProviders({
   fetcher: makeStandardFetcher(fetch),
   proxiedFetcher: makeSimpleProxyFetcher(
-    process.env.NEXT_CORS_PROXY_URL!,
+    "https://your.proxy.workers.dev/",
     fetch
   ),
+  // proxiedFetcher: makeSimpleProxyFetcher(
+  //   process.env.NEXT_CORS_PROXY_URL!,
+  //   fetch
+  // ),
   // will be played on a native video player
   target: targets.BROWSER,
 });
