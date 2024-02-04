@@ -14,6 +14,7 @@ const StreamMovies = async ({ params }: any) => {
     {
       method: "POST",
       body: JSON.stringify({ media }),
+      cache: "no-cache",
     }
   ).then((res) => res.json());
   console.log(videoDetails);
@@ -23,7 +24,7 @@ const StreamMovies = async ({ params }: any) => {
         <div className="">
           <div className="">
             <h1>Search</h1>
-            {videoDetails && (
+            {videoDetails.videoDetails && (
               <VideoPlayer
                 type={videoDetails.type}
                 videoDetails={JSON.stringify(videoDetails.videoDetails)}

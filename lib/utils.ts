@@ -43,10 +43,14 @@ export const removeKeysFromQuery = ({
 
 export const convertTMDBtoMedia = (media: any, type: string) => {
   const mediatype = type === "movie" ? "movie" : "show";
+  console.log(media);
   return {
-    title: media.title,
-    tmdbId: media.id.toString(),
-    year: +media?.release_date?.split("-")[0] ?? 0,
+    title: media?.title,
+    tmdbId: media?.id?.toString(),
+    year:
+      +media?.release_date?.split("-")[0] ||
+      media?.first_air_date?.split("-")[0] ||
+      0,
     type: mediatype,
   };
 };

@@ -129,9 +129,11 @@ const MovieCards = ({ movieInfo }: { movieInfo: string }) => {
             translateZ="60"
             className="mt-2 max-w-sm text-sm capitalize text-neutral-500 dark:text-neutral-300"
           >
-            Hover over this card to unleash the power of CSS perspective
-            {/* {data?.media_type}{" "}
-            {data?.release_date && " - " + data?.release_date?.split("-")[0]} */}
+            {/* Hover over this card to unleash the power of CSS perspective */}
+            {data?.media_type} {console.log(data)} {data?.id}
+            {data?.release_date && " - " + data?.release_date?.split("-")[0]}
+            {data?.first_air_date &&
+              " - " + data?.first_air_date?.split("-")[0]}
           </CardItem>
 
           {/* <div className="mt-10 flex items-center justify-between">

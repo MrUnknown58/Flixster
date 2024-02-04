@@ -4,7 +4,8 @@ export const browseCollection = async (query: string) => {
   try {
     const response = await fetchData(url);
     const movieInfo = response?.results?.filter(
-      (item: any) => item.media_type === "movie" || item.media_type === "tv"
+      (item: any) =>
+        (item.media_type === "movie" || item.media_type === "tv") && item.id
     );
     return movieInfo;
   } catch (error) {
