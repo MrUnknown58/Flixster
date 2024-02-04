@@ -50,7 +50,7 @@ export const POST = async (req: Request) => {
       releaseYear: media.year,
       tmdbId: media.tmdbId,
     },
-    sourceOrder: ["flixhq"],
+    // sourceOrder: ["flixhq"],
   });
   // @ts-ignore
   // const qualities = output?.stream?.qualities;
