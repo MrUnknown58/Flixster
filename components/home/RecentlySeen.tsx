@@ -103,6 +103,7 @@ const MovieCards = ({ movieInfo }: { movieInfo: string }) => {
         <CardBody className="group/card relative size-auto  rounded-xl border border-black/[0.1] bg-gray-900 p-6 dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] sm:w-[15rem]">
           <CardItem translateZ="100" className="mt-4 w-full">
             <Image
+              unoptimized
               src={
                 data.poster_path
                   ? `https://image.tmdb.org/t/p/w185/${data.poster_path}`
